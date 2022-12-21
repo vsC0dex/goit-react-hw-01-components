@@ -1,28 +1,41 @@
-import css from './Profile.module.css';
+import {
+  Card,
+  Description,
+  Image,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  Quantity,
+  Label,
+} from 'components/Profile/Profile.styled';
+
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
-
-      <ul className={css.stats}>
+    <Card>
+      <Description>
+        <Image src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <Stats>
         <li>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </li>
         <li>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
         </li>
         <li>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </Card>
   );
 };
+/* <p className={css.name}>{username}</p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p> */
