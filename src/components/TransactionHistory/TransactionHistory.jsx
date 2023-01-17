@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   Body,
   BodyItems,
@@ -30,4 +32,15 @@ export const Transactions = ({ items }) => {
       </Body>
     </Table>
   );
+};
+
+Transactions.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
