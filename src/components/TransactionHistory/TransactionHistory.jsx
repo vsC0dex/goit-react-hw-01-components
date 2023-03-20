@@ -22,11 +22,11 @@ export const Transactions = ({ items }) => {
       </Head>
 
       <Body>
-        {items.map(items => (
-          <BodyList type={items.type} key={items.id}>
-            <BodyItems>{items.type}</BodyItems>
-            <BodyItems>{items.amount}</BodyItems>
-            <BodyItems>{items.currency}</BodyItems>
+        {items.map(({ type, id, amount, currency }) => (
+          <BodyList type={type} key={id}>
+            <BodyItems>{type}</BodyItems>
+            <BodyItems>{amount}</BodyItems>
+            <BodyItems>{currency}</BodyItems>
           </BodyList>
         ))}
       </Body>

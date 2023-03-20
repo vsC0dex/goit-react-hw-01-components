@@ -28,3 +28,16 @@ export const Item = styled.li`
   padding: 25px;
   list-style: none;
 `;
+
+export const Label = styled.span`
+  margin-bottom: 30px;
+  width: 55px;
+  display: block;
+`;
+
+export const Percentage = styled.span`
+  font-size: 25px;
+  font-weight: 700;
+  width: 55px;
+  display: block;
+`;
